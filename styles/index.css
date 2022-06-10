@@ -38,3 +38,51 @@
 .app__nav_links ul li a:hover {
   text-decoration: underline;
 }
+
+.app__nav_toggler {
+  display: none;
+}
+
+.app__mobile_links {
+  display: none;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 760px) {
+  .app__nav_links {
+    display: none;
+  }
+
+  .app__logo {
+    flex-basis: 50%;
+  }
+  .app__nav_toggler {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: flex-end;
+  }
+
+  .app__mobile_links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .app__mobile_links ul {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: stretch;
+  }
+
+  .app__mobile_links ul li {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .app__mobile_links ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+}
