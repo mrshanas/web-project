@@ -63,7 +63,7 @@
   }
 
   .app__mobile_links {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
   }
