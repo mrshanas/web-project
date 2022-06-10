@@ -1,0 +1,40 @@
+/* This is for reseting the browser default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles  */
+.app__navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 5%;
+}
+
+.app__logo {
+  flex-basis: 40%;
+}
+
+.app__nav_links {
+  flex-basis: 60%;
+}
+
+.app__nav_links ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.app__nav_links ul li {
+  list-style: none;
+}
+
+.app__nav_links ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.app__nav_links ul li a:hover {
+  text-decoration: underline;
+}
