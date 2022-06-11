@@ -18,11 +18,11 @@
       <div class="app__nav_links">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="/pages/about_us.html">About Us</a></li>
-          <li><a href="./pages/register.html">Register</a></li>
-          <li><a href="./pages/alumni.html">Alumni</a></li>
-          <li><a href="./pages/staff.html">Staff</a></li>
-          <li><a href="./pages/contacts.html">Contact Us</a></li>
+          <li><a href="./pages/about.php">About Us</a></li>
+          <li><a href="./pages/register.php">Register</a></li>
+          <li><a href="./pages/alumni.php">Alumni</a></li>
+          <li><a href="./pages/staff.php">Staff</a></li>
+          <li><a href="./pages/contacts.php">Contact Us</a></li>
         </ul>
       </div>
     </nav>
