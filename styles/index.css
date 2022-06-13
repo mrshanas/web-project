@@ -1,88 +1,15 @@
-/* This is for reseting the browser default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*
+  Register Page Styling
+*/
+
+.app_form {
+  width: 100%;
+  /* gap: 2rem; */
 }
 
-/* Navbar styles  */
-.app__navbar {
+.app__form_input {
+  width: 100%;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
-  margin: 2% 5%;
-}
-
-.app__logo {
-  flex-basis: 40%;
-}
-
-.app__nav_links {
-  flex-basis: 60%;
-}
-
-.app__nav_links ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-.app__nav_links ul li {
-  list-style: none;
-}
-
-.app__nav_links ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-.app__nav_links ul li a:hover {
-  text-decoration: underline;
-}
-
-.app__nav_toggler {
-  display: none;
-}
-
-.app__mobile_links {
-  display: none;
-}
-
-/* Responsive styles for mobile devices */
-@media (max-width: 760px) {
-  .app__nav_links {
-    display: none;
-  }
-
-  .app__logo {
-    flex-basis: 50%;
-  }
-  .app__nav_toggler {
-    display: flex;
-    flex-basis: 50%;
-    justify-content: flex-end;
-  }
-
-  .app__mobile_links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .app__mobile_links ul {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-around; */
-    align-items: stretch;
-  }
-
-  .app__mobile_links ul li {
-    list-style: none;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .app__mobile_links ul li a {
-    text-decoration: none;
-    color: #000;
-  }
 }
