@@ -18,8 +18,3 @@ passwordField.addEventListener("change", (e) => {
     validatePassword(e.target.value) ? "green" : "red"
   }`;
 });
-
-// register form submit event handler
-// document.getElementById("registerForm").addEventListener("submit", (e) => {
-//   // e.preventDefault();
-// });

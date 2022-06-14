@@ -13,3 +13,88 @@
   display: flex;
   justify-content: space-around;
 }
+
+.app__form_input input {
+  flex-basis: 70%;
+  height: 2rem;
+}
+
+.app__form_cv {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3% auto;
+}
+
+.app__form_cv div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.app__contacts {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.app__contacts div {
+  display: flex;
+  /* align-items: stretch; */
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.app__register_btn {
+  width: 40%;
+  background: blueviolet;
+  height: 4rem;
+  padding: 0;
+  margin: 3% auto;
+  text-align: center;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 2%;
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .app__form_input {
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+  .app__form_input label {
+    display: none;
+  }
+
+  .app__form_input input {
+    margin: 0 auto;
+    width: 90%;
+    height: 3rem;
+    padding: 1rem;
+  }
+
+  .app__form_cv {
+    width: 90%;
+    margin: 3% auto;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem 0;
+  }
+
+  .app__contacts {
+    flex-direction: column;
+    gap: 1.5rem 0;
+  }
+
+  .app__contacts div {
+    gap: 0.5rem 0;
+  }
+
+  .app__contacts div input {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.5rem;
+  }
+}
