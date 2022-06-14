@@ -36,7 +36,7 @@
         if(mysqli_query($connection,$query)){
             echo "Records inserted successfully";
         }else{
-            echo "Failed!!".mysqli_error($connection);
+            echo "Failed!! ".mysqli_error($connection);
         }
     }
 ?>

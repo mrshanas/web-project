@@ -67,7 +67,51 @@
   color: #fff;
 }
 
+/* Login Page Styling */
+
+.app__login {
+  width: 100%;
+}
+
+.app__login_form {
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* border: 1px solid; */
+  width: 40%;
+  margin: 2% auto;
+  height: 80vh;
+  box-shadow: 1rem 1rem 1rem #aaa;
+  background: #dedede;
+  border-radius: 3%;
+}
+
+.app__login_input {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app__login_input input {
+  width: 90%;
+  margin: 2% auto;
+  padding: 3%;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 2.5%;
+}
+
+.app__login_form button {
+  width: 80%;
+  height: 2rem;
+  background: blueviolet;
+  border: none;
+  border-radius: 5%;
+  color: #fff;
+}
+
+/* Mobile screen stylings */
 @media (max-width: 760px) {
+  /* Register Page */
   .app__form_input {
     flex-direction: column;
     justify-content: space-around;
@@ -105,5 +149,15 @@
     width: 95%;
     margin: 0 auto;
     padding: 0.5rem;
+  }
+
+  /* Login Page */
+  .app__login {
+    margin: 8% auto;
+  }
+
+  .app__login_form {
+    width: 95%;
+    height: 70vh;
   }
 }
