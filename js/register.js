@@ -20,6 +20,6 @@ passwordField.addEventListener("change", (e) => {
 });
 
 // register form submit event handler
-document.getElementById("registerForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-});
+// document.getElementById("registerForm").addEventListener("submit", (e) => {
+//   // e.preventDefault();
+// });
