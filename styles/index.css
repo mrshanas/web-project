@@ -17,6 +17,7 @@
 .app__form_input input {
   flex-basis: 70%;
   height: 2rem;
+  padding: 1.5% 0;
 }
 
 .app__form_cv {
@@ -41,8 +42,16 @@
 .app__contacts div {
   display: flex;
   /* align-items: stretch; */
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
+  gap: 0.8rem 0;
+}
+
+.app__contacts div input {
+  padding: 0.2rem 0.9rem;
+}
+.app__contacts div h3 {
+  text-align: center;
 }
 
 .app__register_btn {
