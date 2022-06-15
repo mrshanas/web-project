@@ -3,11 +3,12 @@
 
   
 
-    $email = $_POST['email'];
+    $email = $_POST['emails'];
     $pswd = $_POST['password'];
-    $creds = 'SELECT email,password FROM users';
+    $creds = 'SELECT email,password FROM users WHERE email=$email AND password=$pswd';
     $results = mysqli_query($connection,$creds);
 
+    
     if($results){
         $data = mysqli_fetch_assoc($results);
         
@@ -15,8 +16,9 @@
             if(($email == $data['email']) && ($pswd == $data['password'])){
                 session_start();
                 $_SESSION['email'] = $email;
-                header("location:login.php");
+                header("location:../../../../pages/alumni.html");
             }else{
+                echo $email;
                 echo "Wrong password or email";
                 
             }

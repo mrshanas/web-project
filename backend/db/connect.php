@@ -3,7 +3,5 @@
 
     if(!$connection){
         echo die('Cant connect to the database').mysqli_error();
-    }else{
-        echo "Connection successfull";
     }
 ?>
