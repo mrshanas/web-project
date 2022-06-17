@@ -10,14 +10,23 @@
   </head>
   <body>
   <!-- Connect to the database -->
-    <?php include('../backend/db/connect.php');?>
+    <?php 
+    include('../backend/db/connect.php');
+
+    session_start();
+  // require user to login if logged out
+    if(!isset($_SESSION['email'])){
+        header('location:http://localhost/web-project/pages/login.html');
+    }
+    ?>
 
     <nav class="app__navbar">
       <div class="app__logo">
-        <h1>State Secondary School</h1>
+      <h1>Vecna <span class="mobile_hide">Secondary School</span></h1>
+
       </div>
       <div class="app__nav_toggler">
-        <button id="navToggler">T</button>
+      <img src="../assets/icons/menu.png" alt="Nav icon" id="navToggler">
       </div>
       <div class="app__nav_links">
         <ul>
@@ -28,7 +37,7 @@
           <li><a href="./staff.html">Staff</a></li>
           <li><a href="./contacts.html">Contact Us</a></li>
           <li><a href="./register.html">Register</a></li>
-          <li><a href="./login.html">Login</a></li>
+         <li><a href="../backend/auth/logout.php">Logout</a></li>
         </ul>
       </div>
     </nav>
@@ -42,7 +51,7 @@
         <li><a href="./staff.html">Staff</a></li>
         <li><a href="./contacts.html">Contact Us</a></li>
         <li><a href="./register.html">Register</a></li>
-        <li><a href="./login.html">Login</a></li>
+        <li><a href="../backend/auth/logout.php">Logout</a></li>
       </ul>
     </div>
     <h1>Alumni</h1>

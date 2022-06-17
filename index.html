@@ -7,15 +7,24 @@
     <title>State House Secondary School</title>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/index.css" />
+    <style>
+      h1{
+        color: #fff;
+        opacity: 0.7;
+        font-size: 1.5rem;
+      }
+      
+    </style>
   </head>
-  <body>
+  <body class="app__home">
     <nav class="app__navbar">
       <div class="app__logo">
-        <h1>State Secondary School</h1>
+        <h1>Vecna <span class="mobile_hide">Secondary School</span></h1>
       </div>
       <div class="app__nav_toggler">
-        <button id="navToggler">T</button>
+        <img src="./assets/icons/menu.png" alt="Nav icon" id="navToggler">
       </div>
+     
       <div class="app__nav_links">
         <ul>
           <li><a href="./index.html">Home</a></li>
@@ -39,6 +48,21 @@
         <li><a href="./pages/register.html">Register</a></li>
         <li><a href="./pages/login.html">Login</a></li>
       </ul>
+    </div>
+
+    <div class="app__intro">
+      <div class="container">
+        <h1>Welcome to Vecna Secondary School<br/> Where dreams becomes wins</h1>
+        <div class="app__intro_btn">
+          <button>
+            <a href="./pages/about.html">Get Started</a>
+          </button>
+
+          <button>
+            <a href="./pages/register.html">Register Here</a>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="./js/index.js"></script>
   </body>

@@ -15,28 +15,26 @@
     $twitter = $_POST['twitter'];
 
     
-
     $existingCredsQuery = 'SELECT username,email FROM users';
     $results = mysqli_query($connection,$existingCredsQuery);
 
 
     if($results){
-        $data = mysqli_fetch_assoc($results);
-       
-        // while($data){
-        //     if($data['email'] == $email){
-        //         die('Email already exists');
-        //     }
-        //     if($data['username'] == $username){
-        //         die('Username already exists');
-        //     }
-        // }
+        while($data = mysqli_fetch_assoc($results)){
+            if($data['email'] == $email){
+                die('Email already exists');
+            }
+            if($data['username'] == $username){
+                die('Username already exists');
+            }
+        }
 
         $query = "INSERT INTO `users`(`first_name`,`middle_name`,`surname`,`username`,`email`,`password`,`dob`,`phone_number`,`cv`,`instagram`,`facebook`,`twitter`) VALUES ('$firstname','$middlename','$surname','$username','$email','$password','$dob','$tel','$cv','$insta','$fb','$twitter')";
 
         if(mysqli_query($connection,$query)){
-            header('location:web-project/pages/alumni.html');
-            echo "Records inserted successfully";
+            session_start();
+            $_SESSION['email'] = $email;
+            header('location:http://localhost/web-project/pages/alumni.php');
         }else{
             echo "Failed!! ".mysqli_error($connection);
         }

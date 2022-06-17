@@ -1,6 +1,7 @@
 <?php
     include('./db/connect.php');
 
+
     $aname = $_POST['alname'];
     $eyear = $_POST['enrol_year'];
     $gyear = $_POST['grad_year'];
@@ -16,6 +17,7 @@
     $results = mysqli_query($connection,$query);
 
     if($results){
-        echo "Success";
+        // redirect to alumni page;
+        header('location:http://localhost/web-project/pages/alumni.php');
     }
 ?>

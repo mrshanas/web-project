@@ -1,3 +1,57 @@
+/* Home page styles */
+.app__home{
+  background: url('../assets/images/kimberly-farmer-lUaaKCUANVI-unsplash.jpg') no-repeat;
+  background-size: cover;
+}
+
+.app__intro{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem 0;
+} 
+
+.app__intro_btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 0 1.3rem;
+}
+
+.app__intro_btn button{
+  width: 100%;
+  padding: 3%;
+  border-radius: 2%;
+  border: none;
+  background-color: blueviolet;
+}
+
+.app__intro_btn button a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.app__intro div h1{
+  font-size: 2rem;
+}
+
+@media (max-width:760px){
+  .app__home{
+    background-size: auto;
+  }
+
+  .app__intro_btn{
+    flex-direction: column;
+    gap: 1rem 0;
+  }
+}
+
 /*
   Register Page Styling
 */
@@ -160,4 +214,120 @@
     width: 95%;
     height: 70vh;
   }
+}
+
+/* About page styles */
+.app__about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "logo about"
+  ;
+  width: 100%;
+}
+
+.app__about_header{
+  margin: 3% auto;
+}
+
+.app__about_header h2{
+  text-align: center;
+}
+
+.app__about_logo{
+  grid-area: logo;
+  width: 50%;
+}
+
+.app__about_logo img{
+  width: 100%;
+  margin: 3% auto;
+}
+
+.app__about_description{
+  grid-area: about;
+  width: 50%;
+}
+
+#aboutPage{
+  position: absolute;
+  /* display: flex; */
+  align-items: center;
+  display: inline-block;
+}#cont0{
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  overflow: auto;
+}
+.staff1{
+  position: relative;
+  width: 33.33%;
+  height: auto;
+}.staff1 p{
+  font-size: 10px;
+  width: 70%;
+  text-align: center;
+
+}.staff1 img{
+  width: 50%;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  left: 60px;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* justify-content: center;
+  align-items: center; */
+}.staff1 h4{
+  text-align: center;
+  font-size: 13px;
+}
+
+.staff2{
+  position: relative;
+  width: 33.33%;
+  height: auto;
+}.staff2 p{
+  font-size: 10px;
+  width: 70%;
+  left: 20%;
+
+}.staff2 img{
+  width: 50%;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  left: 60px;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* justify-content: center;
+  align-items: center; */
+}.staff2 h4{
+  text-align: center;
+  font-size: 13px;
+}
+.staff3{
+  position: relative;
+  width: 33.33%;
+  height: auto;
+}.staff3 p{
+  font-size: 10px;
+  width: 70%;
+  text-align: center;
+
+}.staff3 img{
+  width: 50%;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  left: 60px;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* justify-content: center;
+  align-items: center; */
+}.staff3 h4{
+  text-align: center;
+  font-size: 13px;
 }

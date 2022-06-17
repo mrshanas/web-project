@@ -52,6 +52,7 @@ font-family: 'Poppins', sans-serif; */
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .app__nav_links ul li a:hover {
@@ -73,11 +74,12 @@ font-family: 'Poppins', sans-serif; */
   }
 
   .app__logo {
-    flex-basis: 50%;
+    flex-basis: 60%;
+    padding: 3%;
   }
   .app__nav_toggler {
     display: flex;
-    flex-basis: 50%;
+    flex-basis: 40%;
     justify-content: flex-end;
   }
 
@@ -85,6 +87,7 @@ font-family: 'Poppins', sans-serif; */
     display: none;
     flex-direction: column;
     width: 100%;
+    z-index: 30;
   }
 
   .app__mobile_links ul {
@@ -103,5 +106,14 @@ font-family: 'Poppins', sans-serif; */
   .app__mobile_links ul li a {
     text-decoration: none;
     color: #000;
+  }
+
+  #navToggler{
+    width: 50%;
+    height: 90%;
+  }
+
+  .mobile_hide{
+    display: none;
   }
 }
