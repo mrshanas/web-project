@@ -47,17 +47,13 @@
     </div>
     <h1>Alumni</h1>
 
-    <?php
-      $query = 'SELECT * FROM alumni';
-      $results = mysqli_query($connection,$query);
-      $data = mysqli_fetch_assoc($results);
-      echo $data;
+    <p>Are you an alumni? <button type="button" id="alumniBtn">Join Here</button></p>   
 
-    ?>
+    <div class="app__alumni_form" id="alumniForm">
+      <form action="../backend/alumni.php" method="post">
 
-    <div class="app__alumni_form">
-      <form action="" method="post">
-        <input type="text" placeholder="Alumnus name" name="alname" id="alname>
+        
+        <input type="text" placeholder="Alumnus name" name="alname" id="alname"/>
 
         <p>Year of enrollment</p>
         <select name="enrol_year" id="enrolYear">
@@ -75,14 +71,62 @@
         <p>Results</p>
         <select name="results" id="results"></select>
 
-        <input type="text" placeholder="Occupation">
+        <input type="text" placeholder="Occupation" name="occupation">
 
-        <input type="email" placeholder="Email" required>
+        <input type="email" placeholder="Email" required name="email">
 
-        <input type="tel" placeholder="Mobile number" required>
+        <input type="text" name="address" placeholder="Address"/>
+
+        <input type="tel" placeholder="Mobile number" name="tel" required>
 
         <input type="submit" value="Join">
       </form>
+    </div>
+
+    <div class="app__alumni_list">
+      <table border="1">
+        <tr>
+          <th>Alumnus Name</th>
+          <th>Year of Enrollemnt</th>
+          <th>Year of Graduation</th>
+          <th>Headmaster</th>
+          <th>Famous Teacher</th>
+          <th>Results</th>
+          <th>Occupation</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+          
+        </tr>
+        <?php
+          $query = 'SELECT * FROM alumni';
+          $results = mysqli_query($connection,$query);
+
+          if($results){ 
+            while($data = mysqli_fetch_assoc($results)){
+        
+       
+              ?>
+              <tr>
+                <td><?php echo $data['name'];?></td>
+                <td><?php echo $data['enrol_year'];?></td>
+                <td><?php echo $data['grad_year'];?></td>
+                <td><?php echo $data['headmaster'];?></td>
+                <td><?php echo $data['famous_teacher'];?></td>
+                <td><?php echo $data['results'];?></td>
+                <td><?php echo $data['occupation'];?></td>
+                <td><?php echo $data['address'];?></td>
+                <td><?php echo $data['email'];?></td>
+                <td><?php echo $data['mob_number'];?></td>
+              </tr>
+
+            <?php 
+          }
+          }else{
+            echo "No alumni";
+          }
+        ?>
+      </table>
     </div>
     <script src="../js/index.js"></script>
     <script src="../js/alumni.js"></script>

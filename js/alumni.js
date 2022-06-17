@@ -4,6 +4,11 @@ const gradYear = document.getElementById("gradYear");
 const headmaster = document.getElementById("headmasters");
 const teachers = document.getElementById("teachers");
 const schoolResults = document.getElementById("results");
+const alumniForm = document.getElementById('alumniForm');
+const alumniButton = document.getElementById('alumniBtn');
+
+// state
+let isAlumniOpen = false;
 
 const years = [2021, 2020, 2019, 2018, 2017];
 const headmasters = [
@@ -31,7 +36,7 @@ const appendElements = (value, element) => {
   option.value = value;
   option.text = value;
 
-  element.appendChild(option);
+  return element?.appendChild(option);
 };
 
 const checkCharacters = (value, limit) => value > limit;
@@ -41,7 +46,9 @@ years.forEach((val) => {
   appendElements(val, gradYear);
 });
 
-headmasters.forEach((name) => appendElements(name, headmaster));
+headmasters.forEach((name) => {
+  appendElements(name, headmaster);
+});
 
 famousTeachers.forEach((teacher) => appendElements(teacher, teachers));
 
@@ -56,3 +63,18 @@ alName.onchange = (e) => {
     alName.style.border = "1px solid green";
   }
 };
+
+
+// alumni page logic
+const showAlumniForm = () => {
+  alumniForm.style.display = isAlumniOpen?"flex":"none";
+  isAlumniOpen = !isAlumniOpen;
+}
+
+window.addEventListener('load',()=>{
+ showAlumniForm()
+})
+
+alumniButton.addEventListener('click',()=>{
+ showAlumniForm()
+})
