@@ -24,6 +24,12 @@
 font-family: 'Hubballi', cursive;
 font-family: 'Poppins', sans-serif; */
 
+#staffPage,
+#aboutPage,
+#contactPage{
+  background: lightcyan;
+}
+
 /* Navbar styles  */
 .app__navbar {
   display: flex;

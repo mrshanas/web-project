@@ -222,7 +222,9 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
   "logo about"
+  "vision mission"
   ;
+  gap: 1rem 2rem;
   width: 100%;
 }
 
@@ -230,7 +232,9 @@
   margin: 3% auto;
 }
 
-.app__about_header h2{
+.app__about_header h2,
+.app__about_mission h4, 
+.app__about_vision h4{
   text-align: center;
 }
 
@@ -249,85 +253,74 @@
   width: 50%;
 }
 
-#aboutPage{
-  position: absolute;
-  /* display: flex; */
-  align-items: center;
-  display: inline-block;
-}#cont0{
-  position: relative;
-  width: 100%;
+.app__about_vision{
+  grid-area: vision;
+}
+
+.app__about_mission{
+  grid-area: mission;
+}
+
+.app__about_mission h4, 
+.app__about_vision h4{
+  font-size: 2rem;
+  letter-spacing: 50%;
+  margin: 3% auto;
+}
+
+/* Staff Page Styles */
+
+.app__staff_container{
   display: flex;
-  /* flex-wrap: wrap; */
-  overflow: auto;
-}
-.staff1{
-  position: relative;
-  width: 33.33%;
-  height: auto;
-}.staff1 p{
-  font-size: 10px;
-  width: 70%;
-  text-align: center;
-
-}.staff1 img{
-  width: 50%;
-  height: 120px;
-  position: relative;
-  border-radius: 50%;
-  left: 60px;
-  /* margin: 0 auto; */
-  /* text-align: center; */
-  /* justify-content: center;
-  align-items: center; */
-}.staff1 h4{
-  text-align: center;
-  font-size: 13px;
+  width: calc(100vw - 10%);
+  justify-content: space-around;
+  align-items: center;
+  margin: 3% auto;
+  gap:0 1rem ;
 }
 
-.staff2{
-  position: relative;
-  width: 33.33%;
-  height: auto;
-}.staff2 p{
-  font-size: 10px;
-  width: 70%;
-  left: 20%;
-
-}.staff2 img{
-  width: 50%;
-  height: 120px;
-  position: relative;
-  border-radius: 50%;
-  left: 60px;
-  /* margin: 0 auto; */
-  /* text-align: center; */
-  /* justify-content: center;
-  align-items: center; */
-}.staff2 h4{
-  text-align: center;
-  font-size: 13px;
+.app__staff_item{
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 2%;
+  padding: 2%;
+  width: 90%;
+  height: 20rem;
+  background-color: #dedede;
+  box-shadow: 2px 2px 2px #aaa;
 }
-.staff3{
-  position: relative;
-  width: 33.33%;
-  height: auto;
-}.staff3 p{
-  font-size: 10px;
-  width: 70%;
-  text-align: center;
 
-}.staff3 img{
-  width: 50%;
-  height: 120px;
-  position: relative;
+.app__staff_item img{
   border-radius: 50%;
-  left: 60px;
-  /* margin: 0 auto; */
-  /* text-align: center; */
-  /* justify-content: center;
-  align-items: center; */
-}.staff3 h4{
+  width: 5rem;
+  height: 5rem;
+  border: .15rem solid #000;
+}
+
+.app__staff_item p{
+  width: 80%;
   text-align: center;
-  font-size: 13px;
+}
+
+@media (max-width:760px){
+  .app__staff_container,
+  .app__staff_item{
+    flex-direction: column;
+    gap:1rem 0;
+  }
+}
+
+/* Contact Page styling */
+.app__contact_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2% auto;
+  width: 50%;
+  border: 1px solid;
+  gap: 1.2rem 0;
 }
