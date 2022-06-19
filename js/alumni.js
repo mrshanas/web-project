@@ -6,6 +6,7 @@ const teachers = document.getElementById("teachers");
 const schoolResults = document.getElementById("results");
 const alumniForm = document.getElementById('alumniForm');
 const alumniButton = document.getElementById('alumniBtn');
+const alumniPage = document.getElementById('alumniTable');
 
 // state
 let isAlumniOpen = false;
@@ -68,6 +69,7 @@ alName.onchange = (e) => {
 // alumni page logic
 const showAlumniForm = () => {
   alumniForm.style.display = isAlumniOpen?"flex":"none";
+  alumniPage.style.opacity = isAlumniOpen? "0.6":"1";
   isAlumniOpen = !isAlumniOpen;
 }
 

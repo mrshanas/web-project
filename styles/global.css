@@ -26,8 +26,10 @@ font-family: 'Poppins', sans-serif; */
 
 #staffPage,
 #aboutPage,
-#contactPage{
-  background: lightcyan;
+#contactPage,
+#alumniPage,
+#loginPage{
+  background: lightgoldenrodyellow;
 }
 
 /* Navbar styles  */

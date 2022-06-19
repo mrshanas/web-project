@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/index.css" />
   </head>
-  <body>
+  <body id="alumniPage">
   <!-- Connect to the database -->
     <?php 
     include('../backend/db/connect.php');
@@ -54,12 +54,11 @@
         <li><a href="../backend/auth/logout.php">Logout</a></li>
       </ul>
     </div>
-    <h1>Alumni</h1>
+    <!-- <h1>Alumni</h1> -->
 
-    <p>Are you an alumni? <button type="button" id="alumniBtn">Join Here</button></p>   
 
-    <div class="app__alumni_form" id="alumniForm">
-      <form action="../backend/alumni.php" method="post">
+    <div class="app__alumni_container" id="alumniForm">
+      <form action="../backend/alumni.php" method="post" class="app__alumni_form">
 
         
         <input type="text" placeholder="Alumnus name" name="alname" id="alname"/>
@@ -92,8 +91,9 @@
       </form>
     </div>
 
-    <div class="app__alumni_list">
+    <div class="app__alumni_list" id="alumniTable">
       <table border="1">
+        <caption>Alumni at Vecna Secondary</caption>
         <tr>
           <th>Alumnus Name</th>
           <th>Year of Enrollemnt</th>
@@ -136,6 +136,8 @@
           }
         ?>
       </table>
+    <p class="para">Are you an alumni? <a type="button" id="alumniBtn">Join Here</a></p>   
+
     </div>
     <script src="../js/index.js"></script>
     <script src="../js/alumni.js"></script>
